@@ -3,33 +3,29 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    font-family: 'poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 body{
     color: #ededed;
     background: #081b29;
 }
 .header{
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
     padding: 20px 10px;
     background: #051129;
-    /* background: #008080; */
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
 }
 .logo{
-    position: relative;
     font-size: 25px;
     color: #fff;
     text-decoration: none;
     font-weight: 600;
-    /* margin-left: 35px;
-    transition: .3s; */
     cursor: default;
     opacity: 0;
     animation: slideRight 1s ease forwards;
@@ -55,8 +51,6 @@ body{
     width: 100%;
     justify-content: space-between;
     height: 100vh;
-    /* background:url(./images/Home.png) no-repeat; */
-    /* background:  #008080; */
     background-size: cover;
     background-position: center;
     display: flex;
@@ -112,8 +106,6 @@ body{
     animation: slideLeft 1s ease forwards;
     animation-delay: calc(.2s * var(--i));
     margin: 30px 15px 30px 0;
-    /* box-shadow: 0 0 5px #0ef,
-    0 0 25px #0ef; */
 }
 .home-sci a:hover{
     background: #0ef;
@@ -123,9 +115,7 @@ body{
 .profile-pic {
      width: 50%;   
     height: 40%; 
-   
     border-radius: 50%; 
-   
     overflow: hidden;  
     position: relative;
     display: flex;
@@ -139,24 +129,14 @@ body{
                 0 0 80px rgba(0, 255, 255, 0.286),
                 0 0 100px rgba(0, 255, 255, 0.427); 
 }
-
- /* img {
-   width: 50%;
-    height: 50%; 
- }  */
- .profile-pic  {
+.profile-pic img {
+    width: 100%;
+    height: 100%; 
+} 
+.profile-pic  {
     width: 400px;
      height: 400px; 
   } 
-  /* .home-imgHover {
-    width: 50px; 
-    height: 50px; 
-    border-radius: 100%;
-    background-color: black;
-    position: absolute;
-    top: 0;
-    left: 0;
-} */
 .btn-box{
     display: inline-block;
     padding: 12px 28px;
@@ -176,21 +156,15 @@ body{
 .btn-box:hover{
     box-shadow: 0 0 5px cyan,
     0 0 25px cyan, 0 0 50px cyan,
-    0 0 100px cyan, 0 0 200px cyan,;
+    0 0 100px cyan, 0 0 200px cyan;
 }
 
 .about{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     align-items: center;
     gap: 1.5rem;
-}
-.about-img img{
-    padding-bottom: 20%;
-    max-width: 630px;
-    height: auto;
-    width: 100%;
-    border-radius: 8px;
+    padding: 50px 10%;
 }
 .about-text h2{
     font-size: 60px;
@@ -219,33 +193,33 @@ body{
     font-size: 18px;
 }
 .experience-list p{
-    /* color: aliceblue; */
     font-size: 20px;
-    /* line-height: 1.4; */
     margin-bottom: 2rem
 }
 
-#services{
+.services{
     color: aliceblue;
     font-size: 20px;
     line-height: 1.4;
-    margin-bottom: 4rem;
+    margin-bottom: -10%;
+    padding: 50px 0.5%;
+    
 }
 .sub-title{
     text-align: center;
-    font-size: 60px;
+    font-size: 50px;
     padding-bottom: 70px;
 }
 .sub-title span{
     color: #0ef;
 }
 .container{
-    padding: 90px;
+    padding: 90px 10%;
 }
 .services-list{
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(259px,1fr));
-    grid-gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(259px, 1fr));
+    grid-gap: 20px;
     margin-top: 50px;
 }
 .services-list div{
@@ -304,10 +278,11 @@ section{
     flex-wrap: wrap;
 }
 .container1{
-    width: 600px;
-    height: 500px;
-    padding: 75px 90px;
-    margin-left: 120px;
+    width: 100%;
+    padding: 75px 10%;
+    
+    
+    
 }
 .heading1{
     text-align: center;
@@ -315,6 +290,7 @@ section{
     text-underline-offset: 10px;
     text-decoration-thickness: 5px;
     margin-bottom: 50px;
+    /* text-align: center; */
 }
 .bar{
     font-size: 23px;
@@ -429,16 +405,20 @@ section{
     }
 }
 .radial-bars{
-    width: 100%;
+    width: 150%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: flex-start;
+    margin-left: -25%; 
+    
 }
+
 .radial-bars .radial-bar{
     width: 50%;
     height: 170px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    
     position: relative;
 }
 .radial-bars .radial-bar svg{
@@ -448,6 +428,8 @@ section{
     transform: translate(-50%, -50%) rotate(-90deg);
     width: 120px;
     height: 160px;
+    margin:auto;
+    
 }
 .radial-bars .radial-bar .progress-bar{
     stroke-width: 10;
@@ -470,32 +452,31 @@ section{
     fill: transparent;
     stroke-dasharray: 502;
     stroke-dashoffset: 502;
-    stroke-linecap: round;
+    stroke-linecap: round ;
 } 
 .path-1{animation: animate-path1 1s 1s linear forwards;}
 .path-2{animation: animate-path2 1s 1s linear forwards;}
 .path-3{animation: animate-path3 1s 1s linear forwards;}
 .path-4{animation: animate-path4 1s 1s linear forwards;}
 
-
 @keyframes animate-path1{
     100%{
-        stroke-dashoffset: 50;;
+        stroke-dashoffset: 50;
     }
 }
 @keyframes animate-path2{
     100%{
-        stroke-dashoffset: 175;;
+        stroke-dashoffset: 175;
     }
 }
 @keyframes animate-path3{
     100%{
-        stroke-dashoffset: 125;;
+        stroke-dashoffset: 125;
     }
 }
 @keyframes animate-path4{
     100%{
-        stroke-dashoffset: 75;;
+        stroke-dashoffset: 75;
     }
 }
 .radial-bar .percentage{
@@ -522,7 +503,7 @@ section{
 } 
 .main-text{
     padding-top: 130px;
-    margin-top: 200px;
+    margin-top: -15%;
 }
 .main-text h2{
     font-size: 60px;
@@ -534,10 +515,9 @@ section{
 }
 .portfolio-content{
     display: flex;
-    /* justify-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    flex-wrap: wrap; */
-    grid-template-columns: repeat(auto-fit, minmax(359px,auto));
 }
 .row{
     flex: 1 1 30rem;
@@ -554,8 +534,6 @@ section{
     border-radius: 8px;
     display: flex;
     transition: transform 0.5s;
-    /* height: 300px; */
-
 }
 .layer{
     width: 100%;
@@ -605,15 +583,14 @@ section{
 }
 .contact{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     align-items: center;
     gap: 3rem;
-    padding-left: 30px;
-    margin-top: 130px;
+    padding: 50px 10%;
 }
 .contact-text h2{
     font-size: 90px;
-    line-height: 1;
+    line-height: 2;
     text-align: center;
 }
 .contact-text h2 span{
@@ -733,10 +710,6 @@ section{
     border-radius: 0.5rem;
 }
 
-
-
-
-
 @keyframes slideRight{
     0% { 
         transform: translateX(-100px);
@@ -778,5 +751,83 @@ section{
     100% {
         transform: translateY(0px);
         opacity: 1;
+    }
+}
+
+/* Flexbox for Desktop Layout */
+@media (min-width: 768px) {
+    .skills-wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .container1 {
+        flex: 1;
+        margin: 25%;
+    }
+    
+}
+
+/* Flexbox Column for Mobile Layout */
+@media (max-width: 767px) {
+    .skills-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container1 {
+        margin: 10px 0;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .navbar a {
+        display: block;
+        margin: 10px 0;
+        font-size: 20px;
+    }
+    .home {
+        flex-direction: column;
+        padding: 50px 5%;
+    }
+    .home-content h1 {
+        font-size: 40px;
+    }
+    .home-content h3 {
+        font-size: 24px;
+    }
+    .home-content p {
+        font-size: 18px;
+    }
+    .home-scl {
+        flex-wrap: wrap;
+    }
+    .about {
+        grid-template-columns: 1fr;
+        padding: 30px 5%;
+    }
+    .services-list {
+        grid-template-columns: 1fr;
+        margin-top: 30px;
+    }
+    .services-list div {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    .container1 {
+        padding: 30px 5%;
+        
+
+    }
+    .portfolio-content {
+        flex-direction: column;
+        padding: 30px 5%;
+    }
+    .contact {
+        padding: 30px 5%;
+    }
+    .contact-form form input, form textarea {
+        width: 100%;
     }
 }
